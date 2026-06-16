@@ -5,7 +5,7 @@ import warnings
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from stock_picker.crew import StockPicker
+from market_compass.crew import MarketCompass
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -22,7 +22,7 @@ def run():
     }
 
     try:
-        results = StockPicker().crew().kickoff(inputs=inputs)
+        results = MarketCompass().crew().kickoff(inputs=inputs)
         print(results.raw)
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")

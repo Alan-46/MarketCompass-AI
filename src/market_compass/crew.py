@@ -56,8 +56,8 @@ class TrendingCompanyResearchList(BaseModel):
     research_list: List[TrendingCompanyResearch] = Field(description="Comprehensive reseaarch on all trending companies")
 
 @CrewBase
-class StockPicker():
-    """StockPicker crew"""
+class MarketCompass():
+    """MarketCompass crew"""
 
     agents: list[BaseAgent]
     tasks: list[Task]
@@ -113,7 +113,7 @@ class StockPicker():
 
     @crew
     def crew(self) -> Crew:
-        """Creates the StockPicker crew"""
+        """Creates the MarketCompass crew"""
 
         manager = Agent(
             config = self.agents_config['manager'],
