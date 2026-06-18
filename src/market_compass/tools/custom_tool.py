@@ -17,8 +17,11 @@ class PushNotificationTool(BaseTool):
 
     def _run(self, message: str) -> str:
         ntfy_url = os.getenv("NTFY_URL")
-        requests.post(
+        response = requests.post(
             ntfy_url,
             data=message.encode('utf-8')
         )
-        return '{"notification": "ok"}'
+        if response.status_code == 200:
+            return {"message": "Notification sent successfully!"}
+        else:
+            return {"message": f"Failed to send: {response.status_code}"}
