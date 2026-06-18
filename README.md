@@ -1,8 +1,10 @@
 # Market Compass: Hierarchical Multi-Agent Investment Orchestrator
 
+[![Language: Python3](https://img.shields.io/badge/Language-Python3-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
 [![Framework: CrewAI](https://img.shields.io/badge/Framework-CrewAI-FF4B4B.svg)](https://crewai.com)
 [![Observability: LangSmith](https://img.shields.io/badge/Observability-LangSmith-00C7B7.svg)](https://smith.langchain.com)
 [![Package Manager: uv](https://img.shields.io/badge/Environment-uv-DE5D83.svg)](https://github.com/astral-sh/uv)
+[![Serper](https://img.shields.io/badge/Serper-2563EB.svg)](https://serper.dev)
 
 Market Compass is a practical, production-ready system designed to automate financial news analysis, deep industry research, and stock selection. Built on top of the CrewAI framework, the system uses a Hierarchical Process where a central manager agent coordinates several specialized analyst agents. It uses Pydantic to keep data formats strictly organized and consistent, and it sends out real-time trade signals through decoupled webhooks.
 
